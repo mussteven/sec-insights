@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
 import { FiTrash2 } from "react-icons/fi";
-import GitHubButton from "react-github-btn";
 
 import cx from "classnames";
 import type { SelectOption } from "~/types/selection";
@@ -72,27 +71,25 @@ export const TitleAndDropdown = () => {
 
   return (
     <div className="landing-page-gradient-1 relative flex h-max w-screen flex-col items-center font-lora ">
-      <div className="absolute right-4 top-4">
-        <a href="https://www.llamaindex.ai/" target="_blank">
-          <button className="flex items-center justify-center font-nunito text-lg font-bold ">
-            Built by LlamaIndex
-            <img src="logo-black.svg" className="mx-2 rounded-lg" width={40} />
+      {/* Added Lazard Logo */}
+      <div className="absolute left-4 top-4">
+        <a href="http://localhost:3001/" target="_blank">
+          <button className="flex items-center justify-center">
+            {/* <img src="lazard-logo.png" className="mx-2" width={160} /> */}
           </button>
         </a>
       </div>
+      {/* End Lazard Logo */}
       <div className="mt-28 flex flex-col items-center">
         <div className="w-4/5 text-center text-4xl">
-          Empower your organization&apos;s Business Intelligence with{" "}
-          <span className="font-bold">SEC Insights </span>
+          Enhance your SEC Insights with{" "} 
+          <span className="font-bold">ChatGPT </span>  
         </div>
         <div className="mt-4 flex items-center justify-center">
           <div className="w-3/5 text-center font-nunito">
             Effortlessly analyze multifaceted financial documents such as 10-Ks
             and 10-Qs.
           </div>
-        </div>
-        <div className="mt-4 flex items-center justify-center">
-          <GitHubButton href="https://github.com/run-llama/sec-insights">Open-Sourced on Github</GitHubButton>
         </div>
       </div>
       {isMobile ? (
@@ -168,7 +165,7 @@ export const TitleAndDropdown = () => {
             </div>
             <div className="relative">
               <button
-                className="m-4 rounded border bg-llama-indigo px-8 py-2 text-white hover:bg-[#3B3775] disabled:bg-gray-30"
+                className="m-4 rounded border bg-lazard-navy-blue-4 px-8 py-2 text-white hover:bg-lazard-navy-blue-1 disabled:bg-gray-30"
                 onClick={handleAddDocument}
                 disabled={!isDocumentSelectionEnabled || !selectedYear}
               >
@@ -198,7 +195,7 @@ export const TitleAndDropdown = () => {
                 key={index}
                 className={cx(
                   index === 0 && "mt-2 border-t",
-                  "group flex items-center justify-between border-b p-1 font-nunito font-bold text-[#868686] hover:bg-[#EAEAF7] hover:text-[#350F66] "
+                  "group flex items-center justify-between border-b p-1 font-nunito font-bold text-lazard-navy-blue-1 hover:bg-lazard-grey-1 hover:text-lazard-navy-blue-1 "
                 )}
               >
                 <div className="w-64 text-left">
@@ -246,7 +243,7 @@ export const TitleAndDropdown = () => {
                   disabled={!isStartConversationButtonEnabled}
                   onClick={handleSubmit}
                   className={cx(
-                    "m-4 rounded border bg-llama-indigo px-6 py-2 font-nunito text-white hover:bg-[#3B3775] disabled:bg-gray-30 ",
+                    "m-4 rounded border bg-lazard-navy-blue-4 px-6 py-2 font-nunito text-white hover:bg-lazard-navy-blue-1 disabled:bg-gray-30 ",
                     !isStartConversationButtonEnabled &&
                       "border-gray-300 bg-gray-300"
                   )}
@@ -272,5 +269,7 @@ export const TitleAndDropdown = () => {
         </div>
       )}
     </div>
+  
   );
+    
 };

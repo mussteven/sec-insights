@@ -149,7 +149,7 @@ export default function Conversation() {
                 .push(`/`)
                 .catch(() => console.log("error navigating to conversation"));
             }}
-            className="m-4 rounded border bg-llama-indigo px-8 py-2 font-bold text-white hover:bg-[#3B3775]"
+            className="m-4 rounded border bg-lazard-navy-blue-3 px-8 py-2 font-bold text-white hover:bg-[#3B3775]"
           >
             Back Home
           </button>
@@ -170,13 +170,13 @@ export default function Conversation() {
                     .push("/")
                     .catch(() => console.error("error navigating home"));
                 }}
-                className="ml-4 flex items-center justify-center rounded px-2 font-light text-[#9EA2B0] hover:text-gray-90"
+                className="ml-4 flex items-center justify-center rounded px-2 font-light text-[#9EA2B0] hover:text-lazard-navy-blue-1"
               >
                 <BiArrowBack className="mr-1" /> Back to Document Selection
               </button>
               <button
                 onClick={toggleShareModal}
-                className="mr-3 flex items-center justify-center rounded-full border border-gray-400 p-1 px-3 text-gray-400 hover:bg-gray-15"
+                className="mr-3 flex items-center justify-center rounded-full border border-gray-400 p-1 px-3 text-gray-400 hover:bg-lazard-navy-blue-1 hover:text-white"
               >
                 <div className="text-xs font-medium">Share</div>
                 <FiShare className="ml-1" size={12} />
@@ -202,9 +202,9 @@ export default function Conversation() {
             <button
               disabled={isMessagePending || userMessage.length === 0}
               onClick={submit}
-              className="z-1 absolute right-6 top-1/2 mb-1 -translate-y-1/2 transform rounded text-gray-90 opacity-80 enabled:hover:opacity-100 disabled:opacity-30"
+              className="z-1 absolute right-6 top-1/2 mb-1 -translate-y-1/2 transform rounded lazard-navy-4 opacity-70 enabled:hover:opacity-100 disabled:opacity-30"
             >
-              <BsArrowUpCircle size={24} />
+              <BsArrowUpCircle size={36} />
             </button>
           </div>
         </div>

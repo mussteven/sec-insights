@@ -102,7 +102,7 @@ if settings.BACKEND_CORS_ORIGINS:
         settings.ENVIRONMENT == AppEnvironment.LOCAL:
         # add codespace origin if running in Github codespace
         origins.append(f"https://{settings.CODESPACE_NAME}-3000.app.github.dev")
-    # allow all origins
+    #allow all origins
     app.add_middleware(
         CORSMiddleware,
         allow_origins=origins,
@@ -133,7 +133,7 @@ def start():
     uvicorn.run(
         "app.main:app",
         host="0.0.0.0",
-        port=8000,
+        port=8001,
         reload=live_reload,
         workers=settings.UVICORN_WORKER_COUNT,
     )

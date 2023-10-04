@@ -111,7 +111,7 @@ def index_to_query_engine(doc_id: str, index: VectorStoreIndex) -> BaseQueryEngi
     filters = MetadataFilters(
         filters=[ExactMatchFilter(key=DB_DOC_ID_KEY, value=doc_id)]
     )
-    kwargs = {"similarity_top_k": 3, "filters": filters}
+    kwargs = {"similarity_top_k": 5, "filters": filters}
     return index.as_query_engine(**kwargs)
 
 

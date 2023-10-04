@@ -63,7 +63,8 @@ async def async_upsert_documents_from_filings(url_base: str, doc_dir: str):
     for filing in tqdm(filings, desc="Upserting docs from filings"):
         if filing.symbol not in stocks_dict:
             print(f"Symbol {filing.symbol} not found in stocks_dict. Skipping.")
-            continue
+            print(f"Adding {filing.symbol} to stocks_dict")
+            stocks_dict.update({filing.symbol: Stock(name=filing.symbol, symbol=filing.symbol, indices=["Other"])})
         stock = stocks_dict[filing.symbol]
         await upsert_document(doc_dir, stock, filing, url_base)
 

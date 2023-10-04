@@ -10,10 +10,10 @@ export default {
         nunito: ["Nunito Sans", "sans-serif"], // The second font is a fallback.
       },
       colors: {
-        "gradient-start": "rgba(255, 255, 204, 0.2)", // Change this with your color.
-        "gradient-end": "rgba(204, 153, 255, 0.2)", // Change this with your color.
-        "gradient-start-light": "rgba(255, 255, 204, 0.1)", // Change this with your color.
-        "gradient-end-light": "rgba(204, 153, 255, 0.1)", // Change this with your color.
+        "gradient-start": "rgba(30, 49, 79, 0.2)", // Navy
+        "gradient-end": "rgba(96, 107, 121, 0.2)", // Grey
+        "gradient-start-light": "rgba(30, 49, 79, 0.1)", // Navy
+        "gradient-end-light": "rgba(96, 107, 121, 0.1)", // Grey
         "gray-00": "#F9F9FA",
         "gray-15": "#E9E9ED",
         "gray-30": "#D2D2DC",
@@ -40,6 +40,16 @@ export default {
         "llama-blue": "#87B6F3",
         "llama-indigo-light": "#EDECFD",
         "llama-indigo": "#817AF2",
+        "lazard-navy-blue-1": "#1A3C5D",
+        "lazard-navy-blue-2": "#2C4E75",
+        "lazard-navy-blue-3": "#3F608D",
+        "lazard-navy-blue-4": "#5272A5",
+        "lazard-navy-blue-5": "#6584BD",
+        "lazard-grey-1": "#B0B4B9",
+        "lazard-grey-2": "#8D9196",
+        "lazard-grey-3": "#6A6E73",
+        "lazard-grey-4": "#474B50",
+        "lazard-black": "#1D1F23"
       },
       backgroundImage: (theme) => ({
         gradient: "url('https://llama-app-frontend.vercel.app/Gradient.png')",
@@ -57,3 +67,4 @@ export default {
   },
   plugins: [],
 } satisfies Config;
+

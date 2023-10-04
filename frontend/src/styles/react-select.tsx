@@ -14,7 +14,7 @@ export const customReactSelectStyles = {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return {
       ...styles,
-      backgroundColor: isSelected ? "#3B3775" : isFocused ? "#817AF2" : null,
+      backgroundColor: isSelected ? "#1A3C5D" : isFocused ? "#5272A5" : null,
       color: isFocused ? "white" : isSelected ? "white" : "black",
     };
   },

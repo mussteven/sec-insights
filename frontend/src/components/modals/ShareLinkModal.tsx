@@ -42,7 +42,7 @@ const ShareLinkModal: React.FC<ShareLinkModalProps> = ({
         />
         <button
           onClick={copyToClipboard}
-          className="rounded bg-llama-indigo px-4 py-2 font-bold text-white opacity-90 hover:opacity-100"
+          className="rounded bg-lazard-navy-blue-1 px-4 py-2 font-bold text-white opacity-80 hover:opacity-100"
         >
           Copy
         </button>

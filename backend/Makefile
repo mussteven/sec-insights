@@ -79,4 +79,4 @@ seed_db_local:
 	docker compose create db
 	docker compose start db
 	make setup_localstack
-	python scripts/seed_db.py --ciks '["0001018724", "1326801"]'  --filing_types '["10-K"]'
+	python scripts/seed_db.py --ciks '["1311370", "1360901", "320193", "789019", "0001018724", "1652044", "1326801", "1318605", "1045810", "1065280","0001633917", "78003",  "901832", "59478", "1682852", "200406"]'  --filing_types '["10-K"]'

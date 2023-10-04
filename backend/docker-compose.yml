@@ -8,14 +8,14 @@ services:
       # when the code within the ./app directory changes
       - ./:/app
     ports:
-      - "127.0.0.1:8000:8000"
+      - "127.0.0.1:8001:8001"
     depends_on:
       - db
     env_file:
       - .env
       - .env.docker
     environment:
-      BACKEND_CORS_ORIGINS: '["http://localhost", "http://localhost:8000"]'
+      BACKEND_CORS_ORIGINS: '["http://localhost", "http://localhost:8001"]'
 
   db:
     image: ankane/pgvector:v0.5.0
